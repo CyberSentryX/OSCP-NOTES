@@ -257,7 +257,7 @@ wfuzz -z file,<payload_file> <target_URL>
 
 - Example:
  ```bash
-wfuzz -z file,fuzz-lfi-param http://192.168.241.229/index.php?FUZZ
+wfuzz -z file,fuzz-lfi-param http://example.com/index.php?FUZZ
  ```
 
 ### 2. ffuf
@@ -269,7 +269,7 @@ ffuf -w <payload_file> -u <target_URL>?FUZZ=<payload> -fs <error_code>
 
 - Example:
  ```bash
-ffuf -w fuzz-lfi-param -u http://192.168.241.229/index.php?FUZZ=/etc/passwd -fs 3151
+ffuf -w fuzz-lfi-param -u http://example.com/index.php?FUZZ=/etc/passwd -fs 2000
  ```
 
 ### 3. Arjun
@@ -281,5 +281,5 @@ arjun -u <target_URL> -w <payload_file>
 
 - Example:
  ```bash
-arjun -u http://192.168.241.229/index.php -w fuzz-lfi-param
+arjun -u http://example.com/index.php -w wordlist.txt
  ```
