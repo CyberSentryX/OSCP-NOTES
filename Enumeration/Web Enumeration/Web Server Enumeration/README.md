@@ -1,4 +1,4 @@
-# Web Server Enumeration
+# Part 2: Web Server Enumeration
 
 Web server enumeration focuses on identifying information about the target web server, including its software, version, and potential vulnerabilities. This information can help in understanding the attack surface and planning further exploitation strategies.
 
