@@ -4,6 +4,11 @@ Network enumeration is a critical phase in penetration testing and security asse
 
 ## Techniques
 
+All in one Command
+
+```bash
+nmap -v -p- -sT -sV -sC -A -O 192.168.1.10 --min-rate=500
+```
 ### 1. Ping Sweeping
 
 Ping sweeping involves sending ICMP echo requests (pings) to a range of IP addresses to determine which hosts are online. This helps identify live hosts on the network.
