@@ -22,7 +22,9 @@ Example:
 
 ```bash
 dig axfr example.com @ns1.example.com
+
 nslookup -type=AXFR example.com ns1.example.com
+
 dnsrecon -d example.com -t axfr
 ```
 
