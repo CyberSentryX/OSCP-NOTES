@@ -248,7 +248,7 @@ curl http://example.com/login
 
 Parameter Fuzzing is a technique used to discover vulnerabilities in web applications by testing different parameters with various payloads. It involves systematically injecting payloads into input fields, headers, or other parts of a request to identify potential security flaws, such as SQL injection, cross-site scripting (XSS), command injection, and more. Here are some examples of using popular parameter fuzzing tools:
 
-1. wfuzz
+### 1. wfuzz
 
 - Syntax:
  ```bash
@@ -260,7 +260,7 @@ wfuzz -z file,<payload_file> <target_URL>
 wfuzz -z file,fuzz-lfi-param http://192.168.241.229/index.php?FUZZ
  ```
 
-2. ffuf
+### 2. ffuf
 
 - Syntax:
  ```bash
@@ -272,7 +272,7 @@ ffuf -w <payload_file> -u <target_URL>?FUZZ=<payload> -fs <error_code>
 ffuf -w fuzz-lfi-param -u http://192.168.241.229/index.php?FUZZ=/etc/passwd -fs 3151
  ```
 
-3. Arjun
+### 3. Arjun
 
 - Syntax:
  ```bash
