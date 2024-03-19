@@ -10,7 +10,7 @@ Directory brute-forcing helps uncover directories and files that are not linked 
 
 Example:
 
-### Dirsearch Tool
+### 1. Dirsearch Tool
 
 Dirsearch is a powerful tool for brute-forcing directories and files on web servers.
 
@@ -74,7 +74,7 @@ Dirsearch is a powerful tool for brute-forcing directories and files on web serv
   dirsearch -u example.com -i 403 -o /path/to/output/dirsearch.txt
  ```
 
-### Feroxbuster Tool
+### 2. Feroxbuster Tool
 
 #### Usage:
 - Feroxbuster can be used from the command line interface. Here's a basic usage example:
