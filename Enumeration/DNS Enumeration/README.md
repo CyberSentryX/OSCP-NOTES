@@ -36,7 +36,13 @@ Performing DNS lookups using tools like nslookup, dig, or host can reveal variou
 Example:
 
 ```bash
-nslookup example.com 
+
+dig example.com
+
+nslookup example.com
+
+host example.com
+
 ```
 ## Brute Force
 
@@ -55,6 +61,10 @@ Example:
 
 ```bash
 dnsrecon -t std -D wordlist.txt -d example.com
+
+dnssnoop -i eth0 -v -x -m example.com
+
+dnstracer -a example.com
 
 ```
 
