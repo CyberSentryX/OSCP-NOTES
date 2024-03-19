@@ -14,13 +14,6 @@ Example:
 
 Dirsearch is a powerful tool for brute-forcing directories and files on web servers.
 
-#### Configuration Files
-
-- `/etc/dirsearch/default.conf`: Dirsearch configuration file.
-- `/usr/lib/python3/dist-packages/dirsearch/db/dicc.txt`: Dirsearch default wordlist.
-- `/usr/share/seclists/Discovery/Web-Content/dirsearch.txt`: Dirsearch default wordlist provided by SecLists.
-- `~/.dirsearch/reports`: By default, Dirsearch saves output reports to this location.
-
 #### Usage Examples
 
 - Basic usage:
@@ -165,19 +158,19 @@ The -w /path/to/wordlist.txt option specifies the path to the wordlist to use fo
 gobuster dir -u http://example.com -w /path/to/wordlist.txt
  ```
 
-Specify the number of threads:
+- Specify the number of threads:
 
  ```bash
 gobuster dir -u http://example.com -w /path/to/wordlist.txt -t 100
  ```
 
-Recursive scanning:
+- Recursive scanning:
 
  ```bash
 gobuster dir -u http://example.com -w /path/to/wordlist.txt -r
  ```
 
-Save output to a file:
+- Save output to a file:
 
  ```bash
 gobuster dir -u http://example.com -w /path/to/wordlist.txt -o /path/to/output.txt
@@ -205,22 +198,46 @@ The URL http://example.com/FUZZ contains the keyword FUZZ, which will be replace
 wfuzz -c -z file,/path/to/wordlist.txt http://example.com/FUZZ
  ```
 
-Specify the number of threads:
+- Specify the number of threads:
 
  ```bash
 wfuzz -c -z file,/path/to/wordlist.txt -t 100 http://example.com/FUZZ
  ```
 
-Filter responses by status code:
+- Filter responses by status code:
 
  ```bash
 wfuzz -c -z file,/path/to/wordlist.txt --hc 200,301 http://example.com/FUZZ
  ```
 
-Save output to a file:
+- Save output to a file:
 
  ```bash
 wfuzz -c -z file,/path/to/wordlist.txt -o /path/to/output.txt http://example.com/FUZZ
  ```
 
 
+
+## 2. Common File Discovery
+
+Common file discovery involves enumerating standard files and directories commonly found on web servers. These files often provide valuable information about the web application's configuration, functionality, and potential vulnerabilities.
+
+Enumerating common files and directories like /robots.txt, /sitemap.xml, /admin, /login, etc., can reveal hidden functionalities, administrative interfaces, or sensitive information that may be overlooked.
+
+Example:
+
+ ```bash
+curl http://example.com/robots.txt
+ ```
+
+ ```bash
+curl http://example.com/sitemap.xml
+ ```
+ 
+ ```bash
+curl http://example.com/admin
+ ```
+ 
+ ```bash
+curl http://example.com/login
+ ```
