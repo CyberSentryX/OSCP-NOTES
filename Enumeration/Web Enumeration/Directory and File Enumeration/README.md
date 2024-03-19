@@ -74,7 +74,10 @@ Dirsearch is a powerful tool for brute-forcing directories and files on web serv
   dirsearch -u example.com -i 403 -o /path/to/output/dirsearch.txt
  ```
 
+
 ### 2. Feroxbuster Tool
+
+Feroxbuster is a tool designed for directory and file brute-forcing on web servers. It is similar to other directory brute-forcing tools like DirBuster and Dirsearch but offers some unique features and advantages. Here's an explanation of Feroxbuster:
 
 #### Usage:
 - Feroxbuster can be used from the command line interface. Here's a basic usage example:
@@ -104,3 +107,41 @@ feroxbuster -u http://example.com -w /path/to/wordlist.txt -r
  ```bash
 feroxbuster -u http://example.com -w /path/to/wordlist.txt -o /path/to/output.txt
  ```
+
+
+### 3. Dirb Tool
+
+Dirb is a popular web application scanner designed to facilitate directory and file brute-forcing on web servers. It helps identify hidden directories and files that may be vulnerable to attacks such as information disclosure, unauthorized access, and directory traversal. Here's an overview of Dirb:
+
+Usage:
+Dirb can be used from the command line interface. Here's a basic usage example:
+
+ ```bash
+dirb http://example.com /path/to/wordlist.txt
+ ```
+The first argument (http://example.com) specifies the target URL to scan.
+The second argument (/path/to/wordlist.txt) specifies the path to the wordlist to use for brute-forcing.
+
+ ```bash
+dirb http://example.com /path/to/wordlist.txt
+ ```
+
+- Specify the number of threads:
+
+ ```bash
+dirb http://example.com /path/to/wordlist.txt -r -T 100
+ ```
+
+- Recursive scanning:
+
+ ```bash
+dirb http://example.com /path/to/wordlist.txt -r
+ ```
+
+- Save output to a file:
+
+ ```bash
+dirb http://example.com /path/to/wordlist.txt -o /path/to/output.txt
+ ```
+
+
