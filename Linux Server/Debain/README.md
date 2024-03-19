@@ -20,7 +20,5 @@ Each directory contains configuration notes and guidelines for setting up a spec
 
 Feel free to contribute by adding additional server configurations or improving existing ones. Fork this repository, make your changes, and submit a pull request.
 
-## License
 
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
