@@ -84,9 +84,10 @@ Feroxbuster is a tool designed for directory and file brute-forcing on web serve
 
  ```bash
 feroxbuster -u http://example.com -w /path/to/wordlist.txt
+ ```
 -u: Specifies the target URL to scan.
 -w: Specifies the path to the wordlist to use for brute-forcing.
- ```
+
 
  ```bash
 feroxbuster -u http://example.com -w /path/to/wordlist.txt
@@ -113,7 +114,7 @@ feroxbuster -u http://example.com -w /path/to/wordlist.txt -o /path/to/output.tx
 
 Dirb is a popular web application scanner designed to facilitate directory and file brute-forcing on web servers. It helps identify hidden directories and files that may be vulnerable to attacks such as information disclosure, unauthorized access, and directory traversal. Here's an overview of Dirb:
 
-Usage:
+#### Usage:
 Dirb can be used from the command line interface. Here's a basic usage example:
 
  ```bash
