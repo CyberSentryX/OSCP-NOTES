@@ -24,9 +24,9 @@ Dirsearch is a powerful tool for brute-forcing directories and files on web serv
 #### Usage Examples
 
 - Basic usage:
-  ```bash
-  dirsearch -u example.com
-  ```
+ ```bash
+ dirsearch -u example.com
+```
   
 - Use a proxy (e.g., Burp Suite):
  ```bash
