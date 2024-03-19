@@ -146,3 +146,81 @@ dirb http://example.com /path/to/wordlist.txt -o /path/to/output.txt
  ```
 
 
+### 4. Gobuster Tool
+
+Gobuster is a tool used for directory and file brute-forcing on web servers. It is designed to help identify hidden directories and files that may be vulnerable to attacks such as unauthorized access, information disclosure, and directory traversal. Here's an overview of Gobuster:
+
+#### Usage:
+Gobuster can be used from the command line interface. Here's a basic usage example:
+
+ ```bash
+
+gobuster dir -u http://example.com -w /path/to/wordlist.txt
+ ```
+The dir command specifies that we want to perform directory brute-forcing.
+The -u http://example.com option specifies the target URL to scan.
+The -w /path/to/wordlist.txt option specifies the path to the wordlist to use for brute-forcing.
+
+ ```bash
+gobuster dir -u http://example.com -w /path/to/wordlist.txt
+ ```
+
+Specify the number of threads:
+
+ ```bash
+gobuster dir -u http://example.com -w /path/to/wordlist.txt -t 100
+ ```
+
+Recursive scanning:
+
+ ```bash
+gobuster dir -u http://example.com -w /path/to/wordlist.txt -r
+ ```
+
+Save output to a file:
+
+ ```bash
+gobuster dir -u http://example.com -w /path/to/wordlist.txt -o /path/to/output.txt
+ ```
+
+
+### 5. Wfuzz Tool
+
+Wfuzz is a versatile web application fuzzer that is used for brute-forcing web applications. It can help identify vulnerabilities such as SQL injection, XSS, directory traversal, and more. Here's an overview of Wfuzz:
+
+#### Usage:
+Wfuzz can be used from the command line interface. Here's a basic usage example:
+
+ ```bash
+wfuzz -c -z file,/path/to/wordlist.txt --hc 404 http://example.com/FUZZ
+ ```
+
+The -c option specifies to colorize output for better readability.
+The -z file,/path/to/wordlist.txt option specifies the wordlist to use for fuzzing.
+The --hc 404 option specifies to hide responses with HTTP status code 404 (Not Found).
+The URL http://example.com/FUZZ contains the keyword FUZZ, which will be replaced by payloads from the wordlist.
+
+
+ ```bash
+wfuzz -c -z file,/path/to/wordlist.txt http://example.com/FUZZ
+ ```
+
+Specify the number of threads:
+
+ ```bash
+wfuzz -c -z file,/path/to/wordlist.txt -t 100 http://example.com/FUZZ
+ ```
+
+Filter responses by status code:
+
+ ```bash
+wfuzz -c -z file,/path/to/wordlist.txt --hc 200,301 http://example.com/FUZZ
+ ```
+
+Save output to a file:
+
+ ```bash
+wfuzz -c -z file,/path/to/wordlist.txt -o /path/to/output.txt http://example.com/FUZZ
+ ```
+
+
