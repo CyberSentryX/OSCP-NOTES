@@ -56,20 +56,20 @@ dnsrecon -t std -D wordlist.txt -d example.com
 
 ## Attacks Using DNS Enumeration
 
-Subdomain Enumeration: Identifying subdomains can reveal additional attack vectors, such as vulnerable services or forgotten subdomains.
-Email Harvesting: Extracting MX records can identify mail servers, which can be used for email harvesting attacks.
-Phishing: Obtaining information about domain names and associated IP addresses can be used for phishing attacks by spoofing legitimate domains.
-Brute Force Attacks: Brute-forcing subdomains can lead to the discovery of internal services or sensitive information.
-Domain Hijacking: Identifying weak or expired DNS records can allow attackers to hijack domains and redirect traffic to malicious servers.
+1. **Subdomain Enumeration: Identifying subdomains can reveal additional attack vectors, such as vulnerable services or forgotten subdomains.
+2. **Email Harvesting: Extracting MX records can identify mail servers, which can be used for email harvesting attacks.
+3. **Phishing: Obtaining information about domain names and associated IP addresses can be used for phishing attacks by spoofing legitimate domains.
+4. **Brute Force Attacks: Brute-forcing subdomains can lead to the discovery of internal services or sensitive information.
+5. **Domain Hijacking: Identifying weak or expired DNS records can allow attackers to hijack domains and redirect traffic to malicious servers.
 
 
 ## Mitigation Techniques
 
-Disable Zone Transfers: Configure DNS servers to deny zone transfers to unauthorized hosts.
-Implement Rate Limiting: Limit the number of queries from a single IP address to prevent brute force attacks.
-Monitor DNS Logs: Regularly monitor DNS logs for unusual queries or unauthorized zone transfers.
-Use DNSSEC: Implement DNSSEC to provide data integrity and authentication of DNS records.
-Regular Audits: Perform regular audits of DNS configurations and records to identify misconfigurations or vulnerabilities.
+1. **Disable Zone Transfers: Configure DNS servers to deny zone transfers to unauthorized hosts.
+2. **Implement Rate Limiting: Limit the number of queries from a single IP address to prevent brute force attacks.
+3. **Monitor DNS Logs: Regularly monitor DNS logs for unusual queries or unauthorized zone transfers.
+4. **Use DNSSEC: Implement DNSSEC to provide data integrity and authentication of DNS records.
+5. **Regular Audits: Perform regular audits of DNS configurations and records to identify misconfigurations or vulnerabilities.
 
 ## Conclusion
 
